@@ -1,70 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Location Info App
 
-## Available Scripts
+**Author**: Alexander Beers
+**Version**: 1.0.0
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+This application outputs various details on a location that a user enters in the search bar such as longitude, latitude, and a detailed map.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+clone repo and install necessary packages+dependencies by running 'npm i' command. Run 'npm start' command and open up application in browser at 'localhost:3000'
 
-### `yarn test`
+## Architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Axios, [LocationIQ API](https://locationiq.com/), React
 
-### `yarn build`
+## Change Log
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credit and Collaborations
 
-### `yarn eject`
+Ryan Emmans: Helped with data flow diagram and LocationIQ api use planning
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Name of feature: Locations - Allow user to enter the name of a location so that they can see the exact latitude and longitude of that location
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Estimate of time needed to complete: 30m
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Start time:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Finish time:
 
-## Learn More
+Actual time needed to complete:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Name of feature: Map - Allow the user to see a map of the city so that they can see the layout of the area
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Estimate of time needed to complete: 30m
 
-### Code Splitting
+Start time:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Finish time:
 
-### Analyzing the Bundle Size
+Actual time needed to complete:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Name of feature: Errors - Allow user to see clear messages if something goes wrong so that they know if I need to make any changes or try again in a different manner
 
-### Making a Progressive Web App
+Estimate of time needed to complete: 15m
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Start time:
 
-### Advanced Configuration
+Finish time:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Actual time needed to complete:
