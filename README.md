@@ -30,11 +30,11 @@ Ryan Emmans: Helped with data flow diagram and LocationIQ api use planning
 
 Estimate of time needed to complete: 30m
 
-Start time:
+Start time: 2:40
 
-Finish time:
+Finish time: 3:20
 
-Actual time needed to complete:
+Actual time needed to complete: 40m
 
 ### Name of feature: Map - Allow the user to see a map of the city so that they can see the layout of the area
 
