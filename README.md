@@ -3,7 +3,7 @@
 ### Netlify link: This app can be found [here](https://nervous-mclean-43f026.netlify.app/)
 
 **Author**: Alexander Beers
-**Version**: 1.0.2
+**Version**: 1.3.2
 
 ## Overview
 
@@ -22,8 +22,11 @@ Axios, [LocationIQ API](https://locationiq.com/), React
 ## Change Log
 
 01-01-2001 2:40pm - App can now successfully call API and extract lat, long, and name data on entered location. Basic Component layout finished.
+
 01-01-2001 3:25pm - App now outputs the appropriate error message for failed API calls.
+
 01-01-2001 6:15pm - App now displays a map along with the name and coordinate data. React Bootstrap components and styling were added.
+
 
 ## Credit and Collaborations
 
