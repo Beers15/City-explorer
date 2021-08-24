@@ -24,7 +24,7 @@ export default class SearchButton extends Component {
           placeholder="Enter the name of a city"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
-          onChange={(e) => this.setState({ searchQuery: e.target.value })} 
+          onChange={(e) => this.setState({ searchQuery: e.target.value })}
           value={this.state.searchQuery}
         />
         <Button
