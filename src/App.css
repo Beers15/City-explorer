@@ -23,6 +23,7 @@
 #error-txt {
   color: red;
   font-size: 2rem;
+  margin-top: 20px;
 }
 
 #map-img {
