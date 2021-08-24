@@ -16,8 +16,8 @@ class App extends Component {
     };
   }
 
-  getLocation = async (q) => {
-    let API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_KEY}&q=${q}&format=json`;
+  getLocation = async (searchQuery) => {
+    let API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_KEY}&q=${searchQuery}&format=json`;
     let errorFound = false;
 
     try {
