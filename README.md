@@ -17,6 +17,8 @@ Clone repo and install necessary packages+dependencies by running 'npm i' comman
 
 Axios, [LocationIQ API](https://locationiq.com/), React
 
+![Data Flow Diagram](DataFlow.jpg)
+
 ## Change Log
 
 01-01-2001 2:40pm - App can now successfully call API and extract lat, long, and name data on entered location. Basic Component layout finished.
