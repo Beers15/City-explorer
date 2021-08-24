@@ -21,11 +21,11 @@ Axios, [LocationIQ API](https://locationiq.com/), React
 
 ## Change Log
 
-01-01-2001 2:40pm - App can now successfully call API and extract lat, long, and name data on entered location. Basic Component layout finished.
+08-23-2021 2:40pm - App can now successfully call API and extract lat, long, and name data on entered location. Basic Component layout finished.
 
-01-01-2001 3:25pm - App now outputs the appropriate error message for failed API calls.
+08-23-2021 3:25pm - App now outputs the appropriate error message for failed API calls.
 
-01-01-2001 6:15pm - App now displays a map along with the name and coordinate data. React Bootstrap components and styling were added.
+08-23-2021 6:15pm - App now displays a map along with the name and coordinate data. React Bootstrap components and styling were added.
 
 
 ## Credit and Collaborations
