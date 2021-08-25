@@ -11,6 +11,7 @@ This application outputs various details on a location that a user enters in the
 
 ## Getting Started
 
+To run the backend of this application please refer to the README for that portion of the application [here](https://github.com/Beers15/city-explorer-api/blob/main/README.md)
 Clone repo and install necessary packages+dependencies by running 'npm i' command. Run 'npm start' command and open up application in browser at 'localhost:3000'. Must have valid API key from LocationIQ to run.
 
 ## Architecture
