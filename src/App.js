@@ -2,9 +2,9 @@ import './App.css';
 import { Component } from 'react';
 import SearchForm from './Components/SearchForm';
 import ResultsDisplay from './Components/ResultsDisplay';
+import Weather from './Components/Weather';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
-
+import CardGroup from 'react-bootstrap/CardGroup';
 
 class App extends Component {
   constructor(props) {
@@ -13,6 +13,8 @@ class App extends Component {
     this.state = {
       location: {},
       error: '',
+      weather: [],
+      weatherErr: null,
     };
   }
 
@@ -33,26 +35,51 @@ class App extends Component {
     }
   }
 
+  getWeather = async (searchQuery) => {
+    this.setState({weatherErr: null});
+
+    let API = `http://localhost:3001/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}&searchQuery=${searchQuery}`;
+
+    try {
+      const res = await axios.get(API);
+      if(res.data.error) {
+        console.log(res.data);
+        this.setState({
+          weatherErr: res.data.error,
+          weather: [],
+        });
+        return;
+      }
+      this.setState({weather: res.data.forecasts});
+      console.log(this.state.weather);
+    } catch(err) {
+      this.setState({error: 'Status Code ' + err.response.status + ': ' + err.response.data.error
+                     + '. Please Modify your query and try again.'});
+    }
+  }
+
+  getData = async (searchQuery) => {
+    await this.getLocation(searchQuery);
+    this.getWeather(searchQuery);
+  }
+
   render() {
     return (
-      <div className="App">
-
-        <Card bg="success" border="warning" className="app-card">
-          <Card.Header className="app-card-header">Location Info</Card.Header>
-          <Card.Body>
-            <SearchForm getSearchQuery={this.getLocation} />
-          </Card.Body>
-        </Card>
+      <>
+        <SearchForm getSearchQuery={this.getData} />
 
         {this.state.error && <p id="error-txt">{this.state.error}</p>}
 
         {(this.state.location.lon && this.state.location.lat) &&
-          <ResultsDisplay
-            mapSrc={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_KEY}&center=${this.state.location.lat},${this.state.location.lon}&zoom=9`}
-            location={this.state.location}
-          />
+          <CardGroup>
+            <ResultsDisplay
+              mapSrc={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_KEY}&center=${this.state.location.lat},${this.state.location.lon}&zoom=9`}
+              location={this.state.location}
+            />
+            <Weather weather={this.state.weather} error={this.state.weatherErr} location={this.state.location.display_name} />
+          </CardGroup>
         }
-      </div>
+      </>
     );
   }
 }
