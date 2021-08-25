@@ -19,7 +19,7 @@ export default class SearchButton extends Component {
 
   render() {
     return (
-      <Card bg="success" border="warning" className="header-card">
+      <Card bg="dark" border="warning" className="header-card">
         <Card.Header className="main-header">City Explorer</Card.Header>
         <Card.Body>
           <InputGroup id="search-form" className="mb-3">
@@ -35,7 +35,7 @@ export default class SearchButton extends Component {
               id="button-addon2"
               onClick={this.handleSubmit}
             >
-              Send
+              Explore!
             </Button>
           </InputGroup>
         </Card.Body>

@@ -1,10 +1,12 @@
 import './App.css';
 import { Component } from 'react';
 import SearchForm from './Components/SearchForm';
-import ResultsDisplay from './Components/ResultsDisplay';
+import Location from './Components/Location';
+import Movies from './Components/Movies';
 import Weather from './Components/Weather';
 import axios from 'axios';
 import CardGroup from 'react-bootstrap/CardGroup';
+
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +16,9 @@ class App extends Component {
       location: {},
       error: '',
       weather: [],
-      weatherErr: null,
+      weatherErr: '',
+      movieErr: '',
+      movies: [],
     };
   }
 
@@ -53,9 +57,29 @@ class App extends Component {
     }
   }
 
+  getMovies = async (searchQuery) => {
+    this.setState({movieErr: null});
+
+    let API = `http://localhost:3001/movies?l&query=${searchQuery}`;
+
+    try {
+      const res = await axios.get(API);
+      this.setState({movies: res.data.movies});
+    } catch(err) {
+      console.log(err.response.data.error);
+
+      this.setState({
+        movieErr: err.response.data.error,
+        movies: [],
+      });
+    }
+  }
+
+
   getData = async (searchQuery) => {
     await this.getLocation(searchQuery);
     this.getWeather(searchQuery);
+    this.getMovies(searchQuery);
   }
 
   render() {
@@ -67,11 +91,12 @@ class App extends Component {
 
         {(this.state.location.lon && this.state.location.lat) &&
           <CardGroup>
-            <ResultsDisplay
+            <Location
               mapSrc={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_KEY}&center=${this.state.location.lat},${this.state.location.lon}&zoom=9`}
               location={this.state.location}
             />
             <Weather weather={this.state.weather} error={this.state.weatherErr} location={this.state.location.display_name} />
+            <Movies movies={this.state.movies} />
           </CardGroup>
         }
       </>
