@@ -42,19 +42,14 @@ class App extends Component {
 
     try {
       const res = await axios.get(API);
-      if(res.data.error) {
-        console.log(res.data);
-        this.setState({
-          weatherErr: res.data.error,
-          weather: [],
-        });
-        return;
-      }
       this.setState({weather: res.data.forecasts});
-      console.log(this.state.weather);
     } catch(err) {
-      this.setState({error: 'Status Code ' + err.response.status + ': ' + err.response.data.error
-                     + '. Please Modify your query and try again.'});
+      console.log(err.response.data.error);
+
+      this.setState({
+        weatherErr: err.response.data.error,
+        weather: [],
+      });
     }
   }
 
