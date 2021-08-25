@@ -12,12 +12,12 @@ class Weather extends Component {
             {this.props.weather && this.props.weather.map((forecast) => {
               return (
                 <>
-                  <h3>Date: {forecast.date} &nbsp;&nbsp; Weather: {forecast.description}</h3>
+                  <h3>Date: {forecast.date} &nbsp;~~&nbsp; Weather: {forecast.description}</h3>
                   <br />
                 </>
               );
             })}
-            {!this.props.weather && 
+            {this.props.error &&
               <h2>{this.props.error}</h2>
             }
           </Card.Text>

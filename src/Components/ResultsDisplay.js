@@ -13,8 +13,8 @@ class ResultsDisplay extends Component {
               alt="map"
               id="map-img"
             />
-            <Card.Title>{this.props.location.display_name.split(',').slice(1, this.length)}</Card.Title>
-            <Card.Text>
+            <Card.Title id="result-title">{this.props.location.display_name.split(',').slice(1, this.length)}</Card.Title>
+            <Card.Text id="coord-result-text">
               Latitude: {this.props.location.lat} Longitude: {this.props.location.lat}
             </Card.Text>
           </Card.Body>
