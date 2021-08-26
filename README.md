@@ -79,6 +79,16 @@ Estimate of time needed to complete: 3hr
 
 Start time: 1:45
 
-Finish time: 5:12
+Finish time: 5:15
 
-Actual time needed to complete: 3hrs 27m
+Actual time needed to complete: 3hrs 30m
+
+### Name of feature: Modularize the back-end codebase.
+
+Estimate of time needed to complete: 30m
+
+Start time: 12:40
+
+Finish time: 1:00
+
+Actual time needed to complete: 20m
