@@ -5,7 +5,7 @@ class Location extends Component {
   render() {
     return (
       <div>
-        <Card bg="dark" border="warning" className="app-card">
+        <Card bg="dark" className="mt-3 app-card">
           <Card.Header className="app-card-header">{this.props.location.display_name.split(',')[0]}</Card.Header>
           <Card.Body>
             <img

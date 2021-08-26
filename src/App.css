@@ -20,8 +20,20 @@ body {
 .app-card {
   text-align: center;
   color: white;
-  margin-top: 20px;
   font-size: 40px;
+  border: 1px solid white !important;
+}
+
+.card-container {
+  justify-content: center;
+}
+
+.movie-card {
+  width: 22rem;
+}
+
+.forecast-card {
+  width: 28rem;
 }
 
 .app-card-header {
@@ -35,6 +47,7 @@ body {
   font-size: 50px;
   font-weight: 700;
   text-shadow: 3px 3px #7c7373;
+  text-align: center;
 }
 
 .card-txt {

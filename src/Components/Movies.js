@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
+import Movie from './Movie';
 import Card from 'react-bootstrap/Card';
 
 class Movies extends Component {
   render() {
     return (
-      <Card bg="dark" border="warning" className="app-card">
-        <Card.Header className="app-card-header">Movies</Card.Header>
-        <Card.Body>
-          {this.props.movies && this.props.movies.map((movie, idx) => {
-            return (
-              <>
-                <img src={movie.image_url} alt={movie.title}></img>
-                <Card.Text className="card-txt" key={idx}>{movie.title}</Card.Text>
-              </>
-            );
-          })}
-          {this.props.error &&
-            <h2>{this.props.error}</h2>
-          }
-        </Card.Body>
-      </Card>
+      <div>
+        {this.props.movies && this.props.movies.map((movie, idx) => {
+          return (
+            <Movie useHeader={idx === 0 ? true : false} image_url={movie.image_url} title={movie.title} overview={movie.overview} />
+          );
+        })}
+        {this.props.error &&
+          <Card
+            bg="dark"
+            text="white"
+            className="m-3 forecast-card"
+            border="danger"
+          >
+            <Card.Body>
+              <Card.Title>{this.props.error}</Card.Title>
+            </Card.Body>
+          </Card>
+        }
+      </div>
     );
   }
 }
