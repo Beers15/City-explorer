@@ -27,6 +27,7 @@ Axios, [LocationIQ API](https://locationiq.com/), React
 08-23-2021 6:15pm - App now displays a map along with the name and coordinate data.
 08-24-2021 8:00pm - App now displays a weather forecast data. 
 08-25-2021 5:15pm - App now displays movies related to the location that is entered by the user in a styled component.
+08-26-2021 12:30pm - Break down weather and movies components into individual components. Refactor API requesting code. Redo layout of result cards.
 
 ## Credit and Collaborations
 
