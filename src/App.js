@@ -24,6 +24,7 @@ class App extends Component {
 
   getLocation = async (searchQuery) => {
     let API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_KEY}&q=${searchQuery}&format=json`;
+    let API2 = `https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_KEY}&q=${searchQuery}&format=json`;
     let errorFound = false;
 
     try {
@@ -37,6 +38,20 @@ class App extends Component {
     if(!errorFound) {
       this.setState({error: ''});
     }
+    //if something prevented a match, try the European Regions
+    if(errorFound) {
+      try {
+        const res = await axios.get(API2);
+        this.setState({location: res.data[0]});
+      } catch(err) {
+        this.setState({error: 'Status Code ' + err.response.status + ': ' + err.response.data.error
+                      + '. Please Modify your query and try again.'});
+        errorFound = true;
+      }
+      if(!errorFound) {
+        this.setState({error: ''});
+      }
+    }
   }
 
   getWeather = async (searchQuery) => {
@@ -48,8 +63,6 @@ class App extends Component {
       const res = await axios.get(API);
       this.setState({weather: res.data.forecasts});
     } catch(err) {
-      console.log(err.response.data.error);
-
       this.setState({
         weatherErr: err.response.data.error,
         weather: [],
@@ -67,7 +80,6 @@ class App extends Component {
       this.setState({movies: res.data.movies});
     } catch(err) {
       console.log(err.response.data.error);
-
       this.setState({
         movieErr: err.response.data.error,
         movies: [],
@@ -96,7 +108,7 @@ class App extends Component {
               location={this.state.location}
             />
             <Weather weather={this.state.weather} error={this.state.weatherErr} location={this.state.location.display_name} />
-            <Movies movies={this.state.movies} />
+            <Movies movies={this.state.movies} error={this.state.movieErr} />
           </CardGroup>
         }
       </>

@@ -7,10 +7,12 @@ class Movies extends Component {
       <Card bg="dark" border="warning" className="app-card">
         <Card.Header className="app-card-header">Movies</Card.Header>
         <Card.Body>
-          <Card.Title>{}</Card.Title>
           {this.props.movies && this.props.movies.map((movie, idx) => {
             return (
-              <Card.Text className="card-txt" key={idx}>{movie.title}</Card.Text>
+              <>
+                <img src={movie.image_url} alt={movie.title}></img>
+                <Card.Text className="card-txt" key={idx}>{movie.title}</Card.Text>
+              </>
             );
           })}
           {this.props.error &&

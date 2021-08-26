@@ -62,7 +62,8 @@ body {
 }
 
 #result-title {
-  font-size: 30px;
+  font-size: 20px;
+  max-width: 55ch;
 }
 
 #coord-result-text {
