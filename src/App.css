@@ -1,3 +1,10 @@
+
+body {
+  /* https://unsplash.com/photos/XKZN-V7Erfk?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
+  background-image: url('assets/city.png');
+  background-size: no-repeat;
+}
+
 .header-card {
   text-align: center;
   margin: auto;
@@ -21,11 +28,17 @@
   font-size: 50px;
   font-weight: 700;
   color: white;
+  text-shadow: 3px 3px #7c7373;
 }
 
 .main-header {
   font-size: 50px;
   font-weight: 700;
+  text-shadow: 3px 3px #7c7373;
+}
+
+.card-txt {
+  font-size: 20px;
 }
 
 #search-form {
@@ -39,6 +52,7 @@
   color: red;
   font-size: 2rem;
   margin-top: 20px;
+  text-shadow: 2px 2px #5c0808;
 }
 
 #map-img {
@@ -48,7 +62,8 @@
 }
 
 #result-title {
-  font-size: 30px;
+  font-size: 20px;
+  max-width: 55ch;
 }
 
 #coord-result-text {

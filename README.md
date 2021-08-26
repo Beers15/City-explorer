@@ -3,7 +3,7 @@
 ### Netlify link: This app can be found [here](https://nervous-mclean-43f026.netlify.app/)
 
 **Author**: Alexander Beers
-**Version**: 1.3.2
+**Version**: 1.4.2
 
 ## Overview
 
@@ -23,11 +23,10 @@ Axios, [LocationIQ API](https://locationiq.com/), React
 ## Change Log
 
 08-23-2021 2:40pm - App can now successfully call API and extract lat, long, and name data on entered location. Basic Component layout finished.
-
 08-23-2021 3:25pm - App now outputs the appropriate error message for failed API calls.
-
-08-23-2021 6:15pm - App now displays a map along with the name and coordinate data. React Bootstrap components and styling were added.
-
+08-23-2021 6:15pm - App now displays a map along with the name and coordinate data.
+08-24-2021 8:00pm - App now displays a weather forecast data. 
+08-25-2021 5:15pm - App now displays movies related to the location that is entered by the user in a styled component.
 
 ## Credit and Collaborations
 
@@ -53,7 +52,7 @@ Finish time: 3:42
 
 Actual time needed to complete: 17m
 
-### Name of feature: Map - Allow the user to see a map of the city so that they can see the layout of the area and style app
+### Name of feature: Map - Allow the user to see a map of the city so that they can see the layout of the area.
 
 Estimate of time needed to complete: 30m
 
@@ -62,3 +61,23 @@ Start time: 4:05
 Finish time: 6:15
 
 Actual time needed to complete: 2hrs 10m
+
+### Name of feature: Weather - Allow the user to see weather forecast data whenever they enter a city in. Apply React Bootstrap styling to existing components.
+
+Estimate of time needed to complete: 3hr 40m
+
+Start time: 4:05
+
+Finish time: 7:45
+
+Actual time needed to complete: 2hrs 10m
+
+### Name of feature: Movies - Get movies related to the entered city and display them to user in a styled component. Display feedback if none exist.
+
+Estimate of time needed to complete: 3hr
+
+Start time: 1:45
+
+Finish time: 5:12
+
+Actual time needed to complete: 3hrs 27m
