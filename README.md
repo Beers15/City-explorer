@@ -18,7 +18,7 @@ Clone repo and install necessary packages+dependencies by running 'npm i' comman
 
 Axios, [LocationIQ API](https://locationiq.com/), React
 
-![Data Flow Diagram](City Explorer Dataflow.jpg)
+![Data Flow Diagram](City-Explorer-Dataflow.jpg)
 
 ## Change Log
 
@@ -83,12 +83,12 @@ Finish time: 5:15
 
 Actual time needed to complete: 3hrs 30m
 
-### Name of feature: Modularize the back-end codebase.
+### Name of feature: Get restaurants related to the entered city and display them to user in a styled component. Display feedback if none exist.
 
-Estimate of time needed to complete: 30m
+Estimate of time needed to complete: 
 
-Start time: 12:40
+Start time: 
 
-Finish time: 1:00
+Finish time: 
 
-Actual time needed to complete: 20m
+Actual time needed to complete:
