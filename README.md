@@ -18,7 +18,7 @@ Clone repo and install necessary packages+dependencies by running 'npm i' comman
 
 Axios, [LocationIQ API](https://locationiq.com/), React
 
-![Data Flow Diagram](DataFlow.jpg)
+![Data Flow Diagram](City Explorer Dataflow.jpg)
 
 ## Change Log
 
