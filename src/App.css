@@ -28,7 +28,7 @@ body {
   justify-content: center;
 }
 
-.movie-card {
+.movie-card, .restaurant-card {
   width: 22rem;
 }
 

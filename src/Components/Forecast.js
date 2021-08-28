@@ -7,7 +7,7 @@ class Forecast extends Component {
       <Card
         bg="dark"
         text="white"
-        className="m-2 forecast-card"
+        className="m-2 mt-3 forecast-card"
         border="info"
       >
         {this.props.useHeader &&
