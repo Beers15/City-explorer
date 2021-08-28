@@ -35,24 +35,24 @@ class App extends Component {
   getWeather = async (searchQuery) => {
     this.setState({weatherErr: null});
 
-    let API = `http://localhost:3001/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}&searchQuery=${searchQuery}`;
-    //let API = `${process.env.REACT_APP_DEPLOYMENT_PATH}/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}&searchQuery=${searchQuery}`;
+    //let API = `http://localhost:3001/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}&searchQuery=${searchQuery}`;
+    let API = `${process.env.REACT_APP_DEPLOYMENT_PATH}/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}&searchQuery=${searchQuery}`;
     this.makeRequest(API, 'weather');
   }
 
   getMovies = async (searchQuery) => {
     this.setState({movieErr: null});
 
-    let API = `http://localhost:3001/movies?l&query=${searchQuery}`;
-    //let API = `${process.env.REACT_APP_DEPLOYMENT_PATH}/movies?&query=${searchQuery}`;
+    //let API = `http://localhost:3001/movies?l&query=${searchQuery}`;
+    let API = `${process.env.REACT_APP_DEPLOYMENT_PATH}/movies?&query=${searchQuery}`;
     this.makeRequest(API, 'movies');
   }
 
   getRestaurants = async (searchQuery) => {
     this.setState({restaurantsErr: null});
 
-    let API = `http://localhost:3001/yelp?&query=${searchQuery}`;
-    //let API = `${process.env.REACT_APP_DEPLOYMENT_PATH}/yelp?&query=${searchQuery}`;
+    //let API = `http://localhost:3001/yelp?&query=${searchQuery}`;
+    let API = `${process.env.REACT_APP_DEPLOYMENT_PATH}/yelp?&query=${searchQuery}`;
     this.makeRequest(API, 'restaurants');
   }
 
