@@ -26,12 +26,19 @@ Axios, [LocationIQ API](https://locationiq.com/), React
 ## Change Log
 
 08-23-2021 2:40pm - App can now successfully call API and extract lat, long, and name data on entered location. Basic Component layout finished.
+
 08-23-2021 3:25pm - App now outputs the appropriate error message for failed API calls.
+
 08-23-2021 6:15pm - App now displays a map along with the name and coordinate data.
+
 08-24-2021 8:00pm - App now displays a weather forecast data.
+
 08-25-2021 5:15pm - App now displays movies related to the location that is entered by the user in a styled component.
+
 08-26-2021 12:30pm - Break down weather and movies components into individual components. Refactor API requesting code. Redo layout of result cards.
+
 08-27-2021 6:50pm - Get restaurants related to the entered city and display them to user in a styled component. Display feedback if none exist.
+
 
 ### Name of feature: Locations - Allow user to enter the name of a location so that they can see the exact latitude and longitude of that location
 
