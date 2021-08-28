@@ -8,7 +8,12 @@ class Movies extends Component {
       <div>
         {this.props.movies && this.props.movies.map((movie, idx) => {
           return (
-            <Movie useHeader={idx === 0 ? true : false} image_url={movie.image_url} title={movie.title} overview={movie.overview} />
+            <Movie
+              useHeader={idx === 0 ? true : false}
+              image_url={movie.image_url}
+              title={movie.title} overview={movie.overview}
+              key={idx}
+            />
           );
         })}
         {this.props.error &&
